@@ -1,0 +1,25 @@
+{
+  "Index": {
+    "title": "Hello world!!",
+    "subtitle": "How is it going?",
+    "alertMessage": "Something went wrong!",
+    "About": "About",
+    "Contact": "Contact",
+    "Home": "Home",
+    "Register": "Register",
+    "Login": "Login",
+    "language": "language",
+    "descHero": "Your success and profit are our goal",
+    "descHeropro": "Features of our product :",
+    "pro1": "speed to hold",
+    "pro2": "high breaking strength and hardness",
+    "pro3": "Periodic laboratory examination to ensure product quality",
+    "pro4": "competitive prices",
+    "products": "Our products",
+    "GNMCPlatre": "GNMC plaster",
+    "OuledDjellal": "Ouled Djellal",
+    "ComplaintsDepartment": "Complaints Department",
+    "informations": "information",
+    "Products": "Products"
+  }
+}
