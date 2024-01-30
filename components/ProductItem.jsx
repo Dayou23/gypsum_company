@@ -16,11 +16,12 @@ const ProductItem = ({ product }) => {
           className="rounded-t-lg  object-cover"
         />
         <div className="flex items-center justify-between p-3 rounded-b-lg bg-gray-50">
-          <div className="">
+          <div className="truncate">
             <h2 className="text-[12px] font-medium line-clamp-1">{title}</h2>
             <h2 className="text-[10px] text-gray-400 flex  gap-1 items-center">
               {/* <List className="w-4 h-4" /> {t("informations")} */}
               {/* Products */}
+              {product?.attributes?.description[0]?.children[0].text}
             </h2>
           </div>
           {/* <h2>{product?.attributes?.price}</h2> */}

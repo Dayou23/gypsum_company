@@ -1,10 +1,10 @@
-import { useTranslations } from "next-intl";
-import Link from "next-intl/link";
-import AlertMessage from "./AlertMessage";
+// import { useTranslations } from "next-intl";
+// import Link from "next-intl/link";
+// import AlertMessage from "./AlertMessage";
 import Hero from "@/components/Hero";
 
 export default function Home() {
-  const t = useTranslations("Index");
+  // const t = useTranslations("Index");
 
   return (
     <div>

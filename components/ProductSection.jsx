@@ -4,7 +4,7 @@ import ProductList from "./ProductList";
 import productApi from "@/utils/ProductApi";
 // import { ArrowRight } from "lucide-react";
 
-const ProductSection = () => {
+const ProductSection = ({ productsName }) => {
   const [productList, setProductList] = useState([]);
   useEffect(() => {
     const getLatestProducts = async () => {
@@ -19,7 +19,7 @@ const ProductSection = () => {
   return (
     <div className="px-10 md:px-20" id="products">
       <h2 className="font-bold text-[20px] my-3">
-        Products
+        {productsName}
         {/* <span
           className="font-normal text-[14px]
          float-right text-primary flex 

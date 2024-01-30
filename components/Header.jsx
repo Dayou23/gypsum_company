@@ -176,73 +176,77 @@ const Header = () => {
     //   </Navbar.Collapse>
     // </Navbar>
 
-    <Navbar fluid rounded>
+    <Navbar fluid rounded className="sticky top-0 z-50 h-19 shadow-md ">
       <NavbarBrand href="/">
         {/* <img
           src="/favicon.svg"
           className="mr-3 h-6 sm:h-9"
           alt="Flowbite React Logo"
         /> */}
-        <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">
+        <span className="self-center whitespace-nowrap text-xl font-semibold mb-2 sm:mb-0 dark:text-white">
           {t("GNMCPlatre")} {t("OuledDjellal")}
         </span>
       </NavbarBrand>
 
-      <div className="flex md:order-3">
-        <NavbarCollapse>
-          <div></div>
-          <Dropdown
-            arrowIcon={false}
-            inline
-            label={
-              // <Avatar
-              //   alt="language"
-              //   img={(props) => (
-              //     <Image
-              //       alt=""
-              //       height="48"
-              //       referrerPolicy="no-referrer"
-              //       src="/images/people/profile-picture-5.jpg"
-              //       width="48"
-              //       {...props}
-              //     />
-              //   )}
-              //   rounded
-              //   size="xs"
-              // />
-              <MdOutlineLanguage size={27} />
-            }
-          >
-            <DropdownHeader>
-              <span className="block text-sm">{t("language")}</span>
-            </DropdownHeader>
-            <Link href="/" locale="en">
-              <DropdownItem> En</DropdownItem>
-            </Link>
-            <Link href="/" locale="fr">
-              <DropdownItem> Fr</DropdownItem>
-            </Link>
-            <Link href="/" locale="ar">
-              <DropdownItem> Ar</DropdownItem>
-            </Link>
-          </Dropdown>
+      <div className="flex items-center gap-2 md:order-4">
+        {/* <NavbarCollapse> */}
+        <div></div>
 
-          {!userId ? (
-            <>
-              <Link href="/sign-in" locale="fr">
-                {" "}
-                <Button>{t("Login")}</Button>
-              </Link>
-              <Link href="/sign-up" locale="fr">
-                <Button className="mt-2 md:mt-0">{t("Register")} </Button>{" "}
-              </Link>
-            </>
-          ) : (
-            <div className="flex items-center gap-5">
-              <UserButton afterSignOutUrl="/" />
-            </div>
-          )}
-        </NavbarCollapse>
+        {userId ? (
+          <>
+            <Link href="/sign-in" locale="fr">
+              {" "}
+              <Button className="bg-teal-600  text-sm font-medium text-white shadow-md hover:bg-teal-700 focus:outline-none focus:ring active:bg-teal-500 sm:w-auto">
+                {t("Login")}
+              </Button>
+            </Link>
+            <Link href="/sign-up" locale="fr">
+              <Button className="bg-white text-sm font-medium text-teal-600 shadow-md	 hover:text-white focus:outline-none focus:ring active:text-teal-500 sm:w-auto">
+                {t("Register")}{" "}
+              </Button>{" "}
+            </Link>
+          </>
+        ) : (
+          <div className="flex items-center gap-5">
+            <UserButton afterSignOutUrl="/" />
+          </div>
+        )}
+        {/* </NavbarCollapse> */}
+        <Dropdown
+          arrowIcon={false}
+          inline
+          label={
+            // <Avatar
+            //   alt="language"
+            //   img={(props) => (
+            //     <Image
+            //       alt=""
+            //       height="48"
+            //       referrerPolicy="no-referrer"
+            //       src="/images/people/profile-picture-5.jpg"
+            //       width="48"
+            //       {...props}
+            //     />
+            //   )}
+            //   rounded
+            //   size="xs"
+            // />
+            <MdOutlineLanguage size={27} />
+          }
+        >
+          <DropdownHeader>
+            <span className="block text-sm">{t("language")}</span>
+          </DropdownHeader>
+          <Link href="/" locale="en">
+            <DropdownItem> En</DropdownItem>
+          </Link>
+          <Link href="/" locale="fr">
+            <DropdownItem> Fr</DropdownItem>
+          </Link>
+          <Link href="/" locale="ar">
+            <DropdownItem> Ar</DropdownItem>
+          </Link>
+        </Dropdown>
         <NavbarToggle />
       </div>
 
@@ -254,7 +258,7 @@ const Header = () => {
         <NavbarLink href="#products">{t("Products")}</NavbarLink>
         <NavbarLink href="#">{t("About")}</NavbarLink>
         <NavbarLink href="/contact-us"> {t("Contact")}</NavbarLink>
-        <NavbarLink href="/"> {t("ComplaintsDepartment")}</NavbarLink>
+        <NavbarLink href="/complaints"> {t("ComplaintsDepartment")}</NavbarLink>
       </NavbarCollapse>
     </Navbar>
   );

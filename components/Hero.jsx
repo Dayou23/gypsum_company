@@ -27,10 +27,10 @@ const Hero = () => {
 
           <div className="mt-8 flex flex-wrap gap-4 text-center">
             <a
-              href="#"
+              href="#products"
               className="block w-full rounded bg-teal-600 px-12 py-3 text-sm font-medium text-white shadow hover:bg-teal-700 focus:outline-none focus:ring active:bg-teal-500 sm:w-auto"
             >
-              {t("products")}
+              {t("Products")}
             </a>
 
             {/* <a
