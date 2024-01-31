@@ -5,9 +5,9 @@ import { notFound } from "next/navigation";
 import { ClerkProvider } from "@clerk/nextjs";
 import Header from "@/components/Header";
 import ProductSection from "@/components/ProductSection";
-import Footer from "@/components/Footer";
 import useTextDirection from "@/components/useTextDirection";
 import { useTranslations } from "next-intl";
+import FooterComponent from "@/components/Footer";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
@@ -26,13 +26,15 @@ export default function RootLayout({ children, params }) {
 
   return (
     <ClerkProvider>
-      <html lang={locale} dir={direction}>
+      <html lang={locale} dir={direction} className="dark">
         <body className={inter.className}>
           {" "}
-          <Header />
-          {children}
-          <ProductSection productsName={t("productsName")} />
-          <Footer />
+          <div className="dark:bg-[#1F2937]">
+            <Header />
+            {children}
+            <ProductSection productsName={t("productsName")} />
+            <FooterComponent />
+          </div>
         </body>
       </html>
     </ClerkProvider>

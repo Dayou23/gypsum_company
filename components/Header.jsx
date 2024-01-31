@@ -13,11 +13,13 @@ import { useTranslations } from "next-intl";
 import Link from "next-intl/link";
 import { auth, currentUser } from "@clerk/nextjs";
 import { MdOutlineLanguage } from "react-icons/md";
+import logoSite from "@/utils/logoSite.png";
+import Image from "next/image";
 
 const Header = () => {
   const t = useTranslations("Index");
   const { userId } = auth();
-  console.log(userId);
+  // console.log(userId);
   return (
     // <header className="bg-white dark:bg-gray-900">
     //   <div className="flex items-center h-16 max-w-screen-xl gap-8 px-4 mx-auto shadow-md sm:px-6 lg:px-8">
@@ -177,14 +179,16 @@ const Header = () => {
     // </Navbar>
 
     <Navbar fluid rounded className="sticky top-0 z-50 h-19 shadow-md ">
-      <NavbarBrand href="/">
-        {/* <img
-          src="/favicon.svg"
-          className="mr-3 h-6 sm:h-9"
-          alt="Flowbite React Logo"
-        /> */}
-        <span className="self-center whitespace-nowrap text-xl font-semibold mb-2 sm:mb-0 dark:text-white">
-          {t("GNMCPlatre")} {t("OuledDjellal")}
+      <NavbarBrand className="flex items-center justify-center" href="/">
+        <Image
+          src={logoSite}
+          className="mr-3 dark:invert"
+          alt="GNMC Logo"
+          width={30}
+          height={30}
+        />
+        <span className="self-center whitespace-nowrap text-xl font-semibold mb-2 sm:mb-0 dark:text-slate-300">
+          {t("GNMCPlatre")}
         </span>
       </NavbarBrand>
 
@@ -192,16 +196,16 @@ const Header = () => {
         {/* <NavbarCollapse> */}
         <div></div>
 
-        {userId ? (
+        {!userId ? (
           <>
             <Link href="/sign-in" locale="fr">
               {" "}
-              <Button className="bg-teal-600  text-sm font-medium text-white shadow-md hover:bg-teal-700 focus:outline-none focus:ring active:bg-teal-500 sm:w-auto">
+              <Button className="bg-teal-600  text-sm font-medium text-slate-100 shadow-md hover:bg-teal-700 focus:outline-none focus:ring active:bg-teal-500 sm:w-auto">
                 {t("Login")}
               </Button>
             </Link>
             <Link href="/sign-up" locale="fr">
-              <Button className="bg-white text-sm font-medium text-teal-600 shadow-md	 hover:text-white focus:outline-none focus:ring active:text-teal-500 sm:w-auto">
+              <Button className="bg-white text-sm font-medium text-teal-600 shadow-md	 hover:text-slate-100 focus:outline-none focus:ring active:text-teal-500 sm:w-auto dark:text-slate-100">
                 {t("Register")}{" "}
               </Button>{" "}
             </Link>
@@ -231,7 +235,7 @@ const Header = () => {
             //   rounded
             //   size="xs"
             // />
-            <MdOutlineLanguage size={27} />
+            <MdOutlineLanguage size={27} className="dark:text-slate-300" />
           }
         >
           <DropdownHeader>

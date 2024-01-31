@@ -17,8 +17,8 @@ const ProductSection = ({ productsName }) => {
   }, []);
   // console.log("productList", productList);
   return (
-    <div className="px-10 md:px-20" id="products">
-      <h2 className="font-bold text-[20px] my-3">
+    <div className="px-10 md:px-20 mb-8" id="products">
+      <h2 className="font-bold text-[20px] my-3 dark:text-white">
         {productsName}
         {/* <span
           className="font-normal text-[14px]

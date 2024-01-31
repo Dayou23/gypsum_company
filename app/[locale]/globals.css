@@ -3,7 +3,9 @@
 @tailwind utilities;
 
 
-.navbar {
+
+
+/* .navbar {
     overflow: hidden;
     background-color: #333;
 }
@@ -62,4 +64,4 @@
 
 .dropdown:hover .dropdown-content {
     display: block;
-}
+} */
