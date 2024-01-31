@@ -26,7 +26,7 @@ export default function RootLayout({ children, params }) {
 
   return (
     <ClerkProvider>
-      <html lang={locale} dir={direction} className="dark">
+      <html lang={locale} dir={direction}>
         <body className={inter.className}>
           {" "}
           <div className="dark:bg-[#1F2937]">
