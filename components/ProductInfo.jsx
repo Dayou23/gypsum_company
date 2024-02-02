@@ -1,16 +1,25 @@
 import SkeletonProductInfo from "./SkeletonProductInfo";
-
-const ProductInfo = ({ product }) => {
+const ProductInfo = ({ product, locale }) => {
   return (
     <div>
       {product?.id ? (
         <div>
-          <h2 className="text-[20px]">{product?.attributes?.title}</h2>
+          <h2 className="text-[20px]">
+            {" "}
+            {locale == "fr" && product?.attributes?.title}
+            {locale == "ar" && product?.attributes?.titleAr}
+            {locale == "en" && product?.attributes?.titleEn}
+          </h2>
           <h2 className="text-[15px] text-gray-400">
             {product?.attributes?.category}
           </h2>
           <h2 className="text-[11px] mt-2">
-            {product?.attributes?.description[0]?.children[0].text}
+            {locale == "fr" &&
+              product?.attributes?.description[0]?.children[0].text}
+            {locale == "ar" &&
+              product?.attributes?.descriptionAr[0]?.children[0].text}
+            {locale == "en" &&
+              product?.attributes?.descriptionEn[0]?.children[0].text}
           </h2>
           {/* <h2 className="text-[11px] text-gray-500 flex gap-2 mt-2 items-center">
             {product?.attributes?.instantDelivery ? (

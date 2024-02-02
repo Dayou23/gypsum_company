@@ -8,14 +8,7 @@ import {
   FooterLinkGroup,
   FooterTitle,
 } from "flowbite-react";
-import {
-  BsDribbble,
-  BsFacebook,
-  BsGithub,
-  BsInstagram,
-  BsTwitter,
-  BsWhatsapp,
-} from "react-icons/bs";
+import { BsFacebook, BsInstagram, BsWhatsapp } from "react-icons/bs";
 import { useTranslations } from "next-intl";
 import { FaPhoneAlt } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
@@ -68,7 +61,7 @@ const FooterComponent = () => {
           <FooterLinkGroup>
             <FooterLink href="/">{t("Home")}</FooterLink>
             <FooterLink href="#products">{t("Products")}</FooterLink>
-            <FooterLink href="#">{t("About")}</FooterLink>
+            <FooterLink href="aboutUs">{t("About")}</FooterLink>
             <FooterLink href="/contact-us">{t("Contact")}</FooterLink>
             <FooterLink href="/complaints">
               {t("ComplaintsDepartment")}

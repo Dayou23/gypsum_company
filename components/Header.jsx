@@ -20,6 +20,7 @@ const Header = () => {
   const t = useTranslations("Index");
   const { userId } = auth();
   // console.log(userId);
+
   return (
     // <header className="bg-white dark:bg-gray-900">
     //   <div className="flex items-center h-16 max-w-screen-xl gap-8 px-4 mx-auto shadow-md sm:px-6 lg:px-8">
@@ -260,7 +261,7 @@ const Header = () => {
           {t("Home")}
         </NavbarLink>
         <NavbarLink href="#products">{t("Products")}</NavbarLink>
-        <NavbarLink href="#">{t("About")}</NavbarLink>
+        <NavbarLink href="/aboutUs">{t("About")}</NavbarLink>
         <NavbarLink href="/contact-us"> {t("Contact")}</NavbarLink>
         <NavbarLink href="/complaints"> {t("ComplaintsDepartment")}</NavbarLink>
       </NavbarCollapse>

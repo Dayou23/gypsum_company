@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-const BreadCrumb = ({ path }) => {
+const BreadCrumb = ({ path, product, locale }) => {
   return (
     <nav aria-label="Breadcrumb" className="flex">
       <ol className="flex overflow-hidden text-gray-600 border border-gray-200 rounded-lg">
@@ -24,11 +24,16 @@ const BreadCrumb = ({ path }) => {
               />
             </svg>
 
-            <span className="ms-1.5 text-xs font-medium"> Home </span>
+            <span className="ms-1.5 text-xs font-medium">
+              {" "}
+              {locale == "fr" && "Main page"}
+              {locale == "ar" && "الصفحة الرئبسبة"}
+              {locale == "en" && "home"}{" "}
+            </span>
           </Link>
         </li>
 
-        <li className="relative flex items-center">
+        {/* <li className="relative flex items-center">
           <span className="absolute inset-y-0 -start-px h-10 w-4 bg-gray-100 [clip-path:_polygon(0_0,_0%_100%,_100%_50%)] rtl:rotate-180"></span>
 
           <a
@@ -37,7 +42,7 @@ const BreadCrumb = ({ path }) => {
           >
             {path?.split("/")[1]}
           </a>
-        </li>
+        </li> */}
         <li className="relative flex items-center">
           <span className="absolute inset-y-0 -start-px h-10 w-4 bg-gray-100 [clip-path:_polygon(0_0,_0%_100%,_100%_50%)] rtl:rotate-180"></span>
 
@@ -45,7 +50,9 @@ const BreadCrumb = ({ path }) => {
             href="#"
             className="flex items-center h-10 text-xs font-medium transition bg-white pe-4 ps-8 hover:text-gray-900"
           >
-            {path?.split("/")[2]}
+            {locale == "fr" && product?.attributes?.title}
+            {locale == "ar" && product?.attributes?.titleAr}
+            {locale == "en" && product?.attributes?.titleEn}
           </a>
         </li>
       </ol>

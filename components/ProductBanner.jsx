@@ -20,7 +20,7 @@ function ProductBanner({ product }) {
               width={400}
               height={400}
               // data-te-img={path?.data[0]?.attributes?.url}
-              class="mb-5 w-full cursor-zoom-in data-[te-lightbox-disabled]:cursor-auto"
+              className="mb-5 w-full cursor-zoom-in data-[te-lightbox-disabled]:cursor-auto"
             />
           </div>
           <div class="flex h-full w-full flex-1 flex-col">
@@ -35,7 +35,7 @@ function ProductBanner({ product }) {
           </div>
         </div>
       ) : (
-        <div className="w-[400px] h-[225px] bg-slate-200 rounded-lg animate-pulse"></div>
+        <div className="w-[55vw] h-[55vh] bg-slate-200 rounded-lg animate-pulse sm:w-[35vw] sm:h-[35vh] xl:w-[40vw] md:h-[40vh]"></div>
       )}
     </>
     // <div>
