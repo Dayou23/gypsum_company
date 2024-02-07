@@ -1,49 +1,55 @@
-import { List, ListItem } from "flowbite-react";
 import { useTranslations } from "next-intl";
-const complaints = () => {
+const CRM = () => {
   const t = useTranslations("Index");
   return (
-    <section className="relative bg-[url(https://www.speridian.com/wp-content/uploads/2022/02/CRM-for-manufacturing-1080x675.jpg)] bg-cover bg-center bg-no-repeat">
+    <section className="relative bg-[url(https://www.blink-it.pt/wp-content/uploads/2022/03/103_CRM.jpg)] bg-cover bg-center bg-no-repeat">
       <div className="absolute inset-0 bg-white/75 sm:bg-transparent sm:from-white/95 sm:to-white/25 ltr:sm:bg-gradient-to-r rtl:sm:bg-gradient-to-l"></div>
+      <div className="relative py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
+        <h1 className="mb-4 text-3xl sm:text-5xl tracking-tight font-extrabold text-center text-gray-900 ">
+          {t("VIPCustomers")}
+        </h1>
 
-      <div className="relative mx-auto max-w-screen-xl px-4 py-32 sm:px-6 lg:flex lg:h-screen lg:items-center lg:px-8">
-        <div className="max-w-xl text-center ltr:sm:text-left rtl:sm:text-right">
-          <h1 className="text-3xl font-extrabold sm:text-5xl">
-            {t("GNMCPlatre")}
-            <strong className="block font-extrabold text-teal-700">
-              {" "}
-              {t("OuledDjellal")}
-            </strong>
-          </h1>
+        <h2 className="mb-2 lg:mb-6 text-lg sm:text-2xl font-extrabold text-center text-gray-800 ">
+          {t("VIPCustomersDecs")}
+        </h2>
 
-          <p className="mt-4 max-w-lg sm:text-xl/relaxed">{t("descHero")}</p>
-          <p style={{ listStyleType: "square" }}> {t("descHeropro")}</p>
-          <List>
-            <ListItem>{t("pro1")}</ListItem>
-            <ListItem>{t("pro2")}</ListItem>
-            <ListItem>{t("pro3")}</ListItem>
-            <ListItem>{t("pro4")}</ListItem>
-          </List>
+        <ol className="relative border-s border-teal-900 dark:border-gray-700">
+          <li className="mb-16 ms-5">
+            <div className="absolute w-5 h-5 bg-teal-900 rounded-full  -start-2.5 border border-black  dark:border-gray-900 dark:bg-gray-700"></div>
+            {/* <div className="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
+            February 2022
+          </div> */}
+            <h3 className="mb-4 text-xl font-semibold text-gray-900 dark:text-white">
+              {t("customer1")}
+            </h3>
+            <p className="mb-4 text-base font-bold text-gray-800 dark:text-gray-400">
+              {t("customer2")}
+            </p>
+            <p className="mb-4 text-base font-bold text-gray-800 dark:text-gray-400">
+              {t("customer3")}
+            </p>
+            <p className="mb-4 text-base font-bold text-gray-800 dark:text-gray-400">
+              {t("customer4")}
+            </p>
+          </li>
 
-          <div className="mt-8 flex flex-wrap gap-4 text-center">
-            <a
-              href="#products"
-              className="block w-full rounded bg-teal-600 px-12 py-3 text-sm font-medium text-white shadow hover:bg-teal-700 focus:outline-none focus:ring active:bg-teal-500 sm:w-auto"
-            >
-              {t("Products")}
-            </a>
+          <li className="ms-5">
+            <div className="absolute w-5 h-5 bg-teal-900 rounded-full  -start-2.5 border border-black dark:border-gray-900 dark:bg-gray-700"></div>
 
-            {/* <a
-              href="#"
-              className="block w-full rounded bg-white px-12 py-3 text-sm font-medium text-teal-600 shadow hover:text-teal-700 focus:outline-none focus:ring active:text-teal-500 sm:w-auto"
-            >
-              Learn More
-            </a> */}
-          </div>
-        </div>
+            <h3 className="mb-4 text-xl font-semibold text-gray-900 dark:text-white">
+              {t("customer5")}
+            </h3>
+            <p className="mb-4 text-base font-bold text-gray-800 dark:text-gray-400">
+              {t("customer6")}
+            </p>
+            <p className="mb-4 text-base font-bold text-gray-800 dark:text-gray-400">
+              {t("customer7")}
+            </p>
+          </li>
+        </ol>
       </div>
     </section>
   );
 };
 
-export default complaints;
+export default CRM;

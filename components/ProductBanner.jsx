@@ -23,7 +23,7 @@ function ProductBanner({ product }) {
               className="mb-5 w-full cursor-zoom-in data-[te-lightbox-disabled]:cursor-auto"
             />
           </div>
-          <div class="flex h-full w-full flex-1 flex-col">
+          <div className="flex h-full w-full flex-1 flex-col">
             <Image
               src={path?.data[1]?.attributes?.url}
               // data-te-img={path.data[1]?.attributes?.url}

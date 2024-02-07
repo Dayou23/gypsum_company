@@ -8,6 +8,7 @@ import ProductSection from "@/components/ProductSection";
 import useTextDirection from "@/components/useTextDirection";
 import { useTranslations } from "next-intl";
 import FooterComponent from "@/components/Footer";
+import ContactUs from "@/components/ContactUs";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
@@ -33,6 +34,7 @@ export default function RootLayout({ children, params }) {
             <Header />
             {children}
             <ProductSection productsName={t("productsName")} locale={locale} />
+            <ContactUs />
             <FooterComponent />
           </div>
         </body>

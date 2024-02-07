@@ -15,7 +15,6 @@ const ProductSection = ({ productsName, locale }) => {
     };
     getLatestProducts();
   }, []);
-  console.log("productList", productList);
   return (
     <div className="px-10 md:px-20 mb-8" id="products">
       <h2 className="font-bold text-[20px] my-3 dark:text-white">
@@ -33,10 +32,10 @@ const ProductSection = ({ productsName, locale }) => {
         <ProductList productList={productList} locale={locale} />
       ) : (
         <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4">
-          <div className="w-[30vw] h-[45vh] bg-slate-200 animate-pulse p-1 rounded-lg  sm:w-[20vw] sm:h-[30vh] "></div>
-          <div className="w-[30vw] h-[45vh] bg-slate-200 p-1 rounded-lg  animate-pulse sm:w-[20vw] sm:h-[30vh] "></div>
-          <div className="w-[30vw] h-[45vh] bg-slate-200 p-1 rounded-lg animate-pulse sm:w-[20vw] sm:h-[30vh] "></div>
-          <div className="w-[30vw] h-[45vh] bg-slate-200 p-1 rounded-lg animate-pulse sm:w-[20vw] sm:h-[30vh] "></div>
+          <div className="w-[15vh] h-[15vh] bg-slate-200 animate-pulse p-1 rounded-lg  sm:w-[20vh] sm:h-[20vh]  lg:w-[30vh] lg:h-[30vh]"></div>
+          <div className="w-[15vh] h-[15vh] bg-slate-200 p-1 rounded-lg  animate-pulse sm:w-[20vh] sm:h-[20vh] lg:w-[30vh] lg:h-[30vh]"></div>
+          <div className="w-[15vh] h-[15vh] bg-slate-200 p-1 rounded-lg animate-pulse sm:w-[20vh] sm:h-[20vh] lg:w-[30vh] lg:h-[30vh]"></div>
+          <div className="w-[15vh] h-[15vh] bg-slate-200 p-1 rounded-lg animate-pulse sm:w-[20vh] sm:h-[20vh] lg:w-[30vh] lg:h-[30vh]"></div>
         </div>
       )}
     </div>

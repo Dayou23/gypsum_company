@@ -3,7 +3,7 @@ import { authMiddleware } from "@clerk/nextjs";
 import createMiddleware from "next-intl/middleware";
 
 const intlMiddleware = createMiddleware({
-  locales: ["en", "fr", "ar"],
+  locales: ["fr", "en", "ar"],
 
   defaultLocale: "fr",
 });
@@ -29,6 +29,14 @@ export default authMiddleware({
     "/en/contact-us",
     "/fr/contact-us",
     "/ar/contact-us",
+    "/en/CRM",
+    "/fr/CRM",
+    "/ar/CRM",
+    "/CRM",
+    "/en/aboutUs",
+    "/fr/aboutUs",
+    "/ar/aboutUs",
+    "/aboutUs",
   ],
 });
 

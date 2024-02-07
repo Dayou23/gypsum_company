@@ -242,14 +242,14 @@ const Header = () => {
           <DropdownHeader>
             <span className="block text-sm">{t("language")}</span>
           </DropdownHeader>
-          <Link href="/" locale="en">
-            <DropdownItem> En</DropdownItem>
+          <Link href="/" locale="en" dir="ltr">
+            <DropdownItem>English</DropdownItem>
           </Link>
-          <Link href="/" locale="fr">
-            <DropdownItem> Fr</DropdownItem>
+          <Link href="/" locale="fr" dir="ltr">
+            <DropdownItem>French</DropdownItem>
           </Link>
-          <Link href="/" locale="ar">
-            <DropdownItem> Ar</DropdownItem>
+          <Link href="/" locale="ar" dir="rtl">
+            <DropdownItem>العربية</DropdownItem>
           </Link>
         </Dropdown>
         <NavbarToggle />
@@ -257,13 +257,11 @@ const Header = () => {
 
       <NavbarCollapse>
         <NavbarLink href="/"></NavbarLink>
-        <NavbarLink href="/" active>
-          {t("Home")}
-        </NavbarLink>
+        <NavbarLink href="/">{t("Home")}</NavbarLink>
         <NavbarLink href="#products">{t("Products")}</NavbarLink>
         <NavbarLink href="/aboutUs">{t("About")}</NavbarLink>
-        <NavbarLink href="/contact-us"> {t("Contact")}</NavbarLink>
-        <NavbarLink href="/complaints"> {t("ComplaintsDepartment")}</NavbarLink>
+        <NavbarLink href="#contact"> {t("Contact")}</NavbarLink>
+        <NavbarLink href="/CRM"> {t("ComplaintsDepartment")}</NavbarLink>
       </NavbarCollapse>
     </Navbar>
   );
