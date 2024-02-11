@@ -1,12 +1,10 @@
 import {
   Footer,
-  FooterBrand,
   FooterCopyright,
   FooterDivider,
   FooterIcon,
   FooterLink,
   FooterLinkGroup,
-  FooterTitle,
 } from "flowbite-react";
 import { BsFacebook, BsInstagram, BsWhatsapp } from "react-icons/bs";
 import { useTranslations } from "next-intl";
@@ -14,6 +12,7 @@ import { FaPhoneAlt } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import Image from "next/image";
 import logoSite from "@/utils/logoSite.png";
+import Link from "next/link";
 
 const FooterComponent = () => {
   const t = useTranslations("Index");
@@ -21,19 +20,19 @@ const FooterComponent = () => {
     <Footer container>
       <div className="w-full">
         <div className="grid w-full justify-between items-center flex-wrap  sm:space-x-2 md:space-x-0 md:flex md:justify-between lg:flex lg:grid-cols-1">
-          <FooterBrand href="/">
+          <Link href="/" className="flex ">
             <Image
               src={logoSite}
-              className="mr-3 dark:invert"
+              className="mr-1 dark:invert"
               alt="GNMC Logo"
               width={70}
               height={70}
             />
-            <span className=" self-center whitespace-nowrap text-base font-semibold mb-2 sm:mb-0  md:text-2xl xl:text-3xl dark:text-slate-300">
+            <span className="self-center text-base font-semibold mb-2 sm:mb-0  md:text-2xl xl:text-3xl dark:text-slate-300">
               <div>{t("GNMCPlatre")} </div>
               <div>{t("OuledDjellal")}</div>
             </span>
-          </FooterBrand>
+          </Link>
 
           {/* <div className="grid grid-cols-2 gap-8 sm:mt-4 sm:grid-cols-3 sm:gap-6">
             <div>
