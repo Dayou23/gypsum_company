@@ -5,7 +5,7 @@ const ContactUs = () => {
     <section
       id="contact"
       // className="border-y-2  border-gray-200"
-      className="relative bg-[url(https://img.freepik.com/free-photo/customer-relationship-management-concept_23-2150038396.jpg?w=900&t=st=1707336076~exp=1707336676~hmac=ae6bf6dff7b0522068c499c7753814661c1f45833d88369ffe541891de587eb8)] bg-cover bg-center bg-no-repeat"
+      className="relative bg-[url(https://res.cloudinary.com/dhiwfjb94/image/upload/v1707681480/customer_relationship_management_concept_7624a7e1b6.jpg)] bg-cover bg-center bg-no-repeat"
     >
       <div className="absolute inset-0 bg-white/75 sm:bg-transparent sm:from-white/95 sm:to-white/25 ltr:sm:bg-gradient-to-r rtl:sm:bg-gradient-to-l"></div>
       <div className="relative py-8 lg:py-16 px-4 mx-auto max-w-screen-md">

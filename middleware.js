@@ -37,6 +37,7 @@ export default authMiddleware({
     "/fr/aboutUs",
     "/ar/aboutUs",
     "/aboutUs",
+    "/:locale/api/sand",
   ],
 });
 

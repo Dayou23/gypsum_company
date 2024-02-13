@@ -3,6 +3,13 @@ const nextConfig = {
   images: {
     domains: ["res.cloudinary.com"],
   },
+  // experimental: {
+  //   serverComponentsExternalPackages: [
+  //     "@react-email/components",
+  //     "@react-email/render",
+  //     "@react-email/tailwind",
+  //   ],
+  // },
 };
 
 const withNextIntl = require("next-intl/plugin")(

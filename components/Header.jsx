@@ -40,7 +40,7 @@ const Header = () => {
         {/* <NavbarCollapse> */}
         <div></div>
 
-        {!userId ? (
+        {userId ? (
           <>
             <Link href="/sign-in" locale="fr">
               {" "}
