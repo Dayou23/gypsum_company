@@ -3,9 +3,9 @@ import { authMiddleware } from "@clerk/nextjs";
 import createMiddleware from "next-intl/middleware";
 
 const intlMiddleware = createMiddleware({
-  locales: ["fr", "en", "ar"],
+  locales: ["en", "fr", "ar"],
 
-  defaultLocale: "fr",
+  defaultLocale: "en",
 });
 
 export default authMiddleware({
@@ -37,7 +37,11 @@ export default authMiddleware({
     "/fr/aboutUs",
     "/ar/aboutUs",
     "/aboutUs",
-    "/:locale/api/sand",
+    // "/:locale/api/sand",
+    "/en/api/sand",
+    "/fr/api/sand",
+    "/ar/api/sand",
+    "/api/sand",
   ],
 });
 

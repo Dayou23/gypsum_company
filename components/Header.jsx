@@ -11,7 +11,7 @@ import {
 } from "flowbite-react";
 import { useTranslations } from "next-intl";
 import Link from "next-intl/link";
-import { auth, currentUser } from "@clerk/nextjs";
+import { auth } from "@clerk/nextjs";
 import { MdOutlineLanguage } from "react-icons/md";
 import logoSite from "@/utils/logoSite.png";
 import Image from "next/image";
@@ -19,6 +19,7 @@ import Image from "next/image";
 const Header = () => {
   const t = useTranslations("Index");
   const { userId } = auth();
+  // const userId = true;
   // console.log(userId);
 
   return (
@@ -40,15 +41,15 @@ const Header = () => {
         {/* <NavbarCollapse> */}
         <div></div>
 
-        {userId ? (
+        {!userId ? (
           <>
-            <Link href="/sign-in" locale="fr">
+            <Link href="/sign-in" locale="en">
               {" "}
               <Button className="bg-teal-600  text-sm font-medium text-slate-100 shadow-md hover:bg-teal-700 focus:outline-none focus:ring active:bg-teal-500 sm:w-auto">
                 {t("Login")}
               </Button>
             </Link>
-            <Link href="/sign-up" locale="fr">
+            <Link href="/sign-up" locale="en">
               <Button className="bg-white text-sm font-medium text-teal-600 shadow-md	 hover:text-slate-100 focus:outline-none focus:ring active:text-teal-500 sm:w-auto dark:text-slate-100">
                 {t("Register")}{" "}
               </Button>{" "}
